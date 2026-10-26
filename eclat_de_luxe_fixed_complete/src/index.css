@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blush-pink: #F5DDE3;
+  --color-champagne-gold: #C6A56B;
+  --color-creamy-ivory: #FFF9F5;
+  --color-dusty-rose: #C98598;
+  --color-deep-chocolate: #38252B;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-creamy-ivory);
+    color: var(--color-deep-chocolate);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #C6A56B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C98598;
+}
+
+/* Glassmorphism & Subtle Shimmer Effects */
+.glass-luxury {
+  background: rgba(255, 249, 245, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(198, 165, 107, 0.2);
+}
+
+.glass-dark {
+  background: rgba(56, 37, 43, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(198, 165, 107, 0.25);
+}
+
+/* Gold Shimmer Gradient Accent */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #C6A56B 0%, #E6C894 50%, #B08E55 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #A8864B 0%, #C6A56B 50%, #8C6D35 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating animation keyframe fallback */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite 2s;
+}
+
+/* Subtle Shimmer Ray */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}

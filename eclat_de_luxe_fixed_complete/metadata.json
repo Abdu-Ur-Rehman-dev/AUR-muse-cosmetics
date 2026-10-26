@@ -1,0 +1,6 @@
+{
+  "name": "Éclat de Luxe | Maison de Beauté",
+  "description": "Ultra-premium international luxury makeup & beauty direct-to-consumer store.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
